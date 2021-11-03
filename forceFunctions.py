@@ -90,7 +90,7 @@ class ClickDetection(_ForceThread):
 
     def run(self):
         self.sensor.zero()
-        sleep(0.25)
+        sleep(0.50)
         peak_force = 0
         while(True):
             force = (-1)*self.sensor.getForce()[self.direction]
