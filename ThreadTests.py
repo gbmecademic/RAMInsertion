@@ -14,10 +14,10 @@ robot = Robot()
 cd = ClickDetection(1, 'Click', 2, sensor, q, 80, 5)
 move = MoveThread(2, 'Move', 2, robot, q)
 move.connect()
-move.move_settings(speed=3)
+move.move_settings(speed=5)
 
 print("Moving to point 1")
-robot.MoveJoints(111.038,35.027,32.493,-1.526,23.191,21.365)
+robot.MoveJoints(112.965,13.578,17.458,0,58.964,74.973)
 
 print('Starting Thread')
 #fs.start()
@@ -36,11 +36,11 @@ with q.mutex:
     q.queue.clear()
 
 print("Moving to point 2")
-robot.MoveJoints(79.054,32.841,36.759,-2.497,20.697,-9.687)
+robot.MoveJoints(74.164,10.85,20.824,0,58.326,36.172)
 
 cd = ClickDetection(1, 'Click', 2, sensor, q, 80, 8)
 move = MoveThread(2, 'Move', 2, robot, q)
-move.move_settings(speed=3)
+move.move_settings(speed=5)
 
 print('Starting Thread')
 #fs.start()
